@@ -68,6 +68,7 @@ function movePacman(eventKeyboard) {
   //eat ghost when super
   if (nextCell === GHOST && gPacman.isSuper) {
     gGhosts.pop();
+    console.log("test");
   }
 
   let isGameOver = checkEngage(nextCell, GHOST);
