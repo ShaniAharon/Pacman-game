@@ -1,0 +1,13 @@
+/* .boardContainer {
+  font-size: 1.1em;
+} */
+
+table {
+  border: 3px solid;
+}
+
+.boardContainer td {
+  border: 1px rebeccapurple solid;
+  width: 25px;
+  height: 25px;
+}
