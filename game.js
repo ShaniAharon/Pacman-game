@@ -70,7 +70,7 @@ function checkEngage(cell, opponent) {
     if (gPacman.isSuper) {
       console.log("Ghost is dead");
       console.log(gGhosts.length);
-      killGhost(gBoard, opponent);
+      killGhost(gBoard);
       return;
       //   clearInterval(gIntrevalGhosts);
     } else {

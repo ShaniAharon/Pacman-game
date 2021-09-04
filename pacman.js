@@ -64,11 +64,10 @@ function movePacman(eventKeyboard) {
       renderCell(gPacman.location, gPacman.symbol);
     }, 5000);
   }
-  //only in  branch
+
   //eat ghost when super
   if (nextCell === GHOST && gPacman.isSuper) {
-    gGhosts.pop();
-    console.log("test");
+    gGhosts.shift();
   }
 
   let isGameOver = checkEngage(nextCell, GHOST);

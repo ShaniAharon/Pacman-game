@@ -24,6 +24,11 @@ function createGhosts(board) {
         return;
       if (board[nextLocation.i][nextLocation.j] === WALL) return;
       if (board[nextLocation.i][nextLocation.j] === GHOST) return;
+      //dont attack super pacman
+      if (board[nextLocation.i][nextLocation.j] === SUPER) {
+        console.log("super");
+        return;
+      }
 
       let isGameOver = checkEngage(
         board[nextLocation.i][nextLocation.j],
@@ -52,7 +57,7 @@ function createGhosts(board) {
       board[ghost.location.i][ghost.location.j] = GHOST;
       renderCell(ghost.location, GHOST);
     });
-  }, 1000);
+  }, 500);
 }
 
 function createGhost(board) {
@@ -72,7 +77,7 @@ function killGhost(board) {
   //TODO: try to fix
   setTimeout(function () {
     createGhost(board);
-  }, 4000);
+  }, 3000);
 }
 
 function getRandomIntInclusive(min, max) {
